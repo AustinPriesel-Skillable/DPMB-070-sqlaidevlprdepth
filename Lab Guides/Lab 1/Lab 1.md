@@ -1,15 +1,26 @@
 # Lab 1: SQL-First Semantic Case Retrieval Agent with SQL Server 2025 and Azure OpenAI
 
+In this lab, participants work with a realistic healthcare scenario at Contoso Medical College Hospital, where doctors need to quickly retrieve clinically similar patient cases using natural language queries. Instead of relying only on traditional keyword search, the hospital aims to implement a SQL-first semantic case retrieval system using SQL Server 2025 integrated with Azure OpenAI. By generating and storing vector embeddings directly inside the database, the solution enables intelligent, context-aware clinical search — transforming SQL Server into an AI-enabled healthcare data platform.
+
 **Objectives**
 
-The overall objective of this lab is to design and implement a
-**SQL-first semantic retrieval system** using SQL Server 2025 and Azure
-OpenAI, enabling natural language clinical case search directly within
-the database engine.
+- Provision and configure SQL Server 2025 on Azure VM
+
+- Create and configure an Azure OpenAI embedding model
+
+- Enable AI and vector capabilities inside SQL Server
+
+- Generate and store vector embeddings for patient case summaries
+
+- Implement semantic similarity search using VECTOR_DISTANCE
+
+- Combine vector search with relational clinical filters
+
+- Compare traditional keyword search with semantic search
 
 ### Exercise 1: **Provision SQL Server on Azure VM**
 
-1.  Open browser enter  Azure SQL hub at
+1.  Open the browser, enter the Azure SQL hub at
     +++https://aka.ms/azuresqlhub+++ or
     +++https://portal.azure.com+++ and sign in with your Azure subscription
     account. Enter +++Azure SQL+++ in the search bar and select it.
@@ -618,9 +629,5 @@ meaning** to a doctor's query, using vector embeddings.
 
 ## Conclusion:
 
-This lab demonstrates how SQL Server 2025 transforms into an AI-enabled
-database platform capable of storing vector embeddings, performing
-semantic similarity search, and integrating directly with Azure OpenAI.
-Using a realistic healthcare scenario, students build a semantic case
-retrieval agent that allows doctors to query patient cases in natural
-language and retrieve clinically relevant results using vector search.
+This lab demonstrates how SQL Server 2025 evolves beyond a traditional relational database into an AI-powered data platform. By integrating Azure OpenAI embeddings directly within SQL, participants build a semantic case retrieval agent that allows doctors to search patient cases using natural language. Through vector indexing, cosine similarity search, and hybrid filtering, learners gain hands-on experience in implementing real-world AI-driven clinical search solutions inside the database engine.
+
