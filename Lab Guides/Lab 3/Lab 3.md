@@ -1,20 +1,22 @@
 # **Lab 3: Building & Securing a Safe Clinical Report Search API** 
 
-(with SQL Server 2025, SSMS Copilot, Managed Identity & Data API Builder)
+In this lab, participants step into a real-world healthcare scenario where a hospital needs a secure and intelligent way to search clinical discharge summaries using natural language. Using Microsoft SQL Server 2025, SQL Server Management Studio Copilot, Azure OpenAI Service, and Data API Builder, learners will build a secure semantic search API that enables staff to retrieve relevant clinical reports while ensuring patient data privacy through masking, RBAC, and managed identity. This hands-on experience demonstrates how modern AI capabilities can be integrated directly into SQL Server to create enterprise-ready, secure healthcare solutions.
 
-Build a secure REST API that lets hospital staff search discharge
-summaries/clinical reports using natural language — with full security,
-governance, and developer productivity.
+**Objectives**
 
-- Returns relevant anonymized report summaries
+By the end of this lab, participants will be able to:
 
-- Uses semantic search (vector + filters)
+- Enable AI and vector search in Microsoft SQL Server 2025
 
-- Protects patient privacy (masking + RBAC)
+- Generate embeddings using Azure OpenAI Service
 
-- Calls Azure OpenAI securely (no stored keys)
+- Implement semantic search with vector indexing
 
-- Can be called from hospital apps
+- Secure clinical data using masking, RBAC, and Managed Identity
+
+- Expose search functionality as a REST API using Data API Builder
+
+- Accelerate development with SQL Server Management Studio Copilot
 
 ## Exercise 1: Provision SQL Server on Azure VM
 
@@ -633,3 +635,7 @@ speed up coding.
     ![](./media/image60.png)
 
     ![](./media/image61.png)
+
+## Conclusion:
+
+By completing this lab, participants have successfully provisioned infrastructure, enabled SQL Server 2025 AI features, generated vector embeddings using Azure OpenAI, implemented semantic search with DiskANN indexing, and secured sensitive patient data using masking and role-based access control. They also exposed the search functionality as a secure REST API for hospital applications. Overall, learners gained practical experience in building an end-to-end AI-powered, privacy-compliant clinical search system that combines database intelligence, cloud AI services, and secure API development into one integrated solution.
