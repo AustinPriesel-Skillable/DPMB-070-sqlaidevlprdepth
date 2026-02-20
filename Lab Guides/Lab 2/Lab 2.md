@@ -1,19 +1,12 @@
-# Lab 2: Building a Medical Research Assistant RAG Chat Application with Azure SQL DB
+# Lab 2: Building a Grounded Medical Research Agent with RAG and Azure SQL Database
 
-In this lab, you take on the role of building a Medical Research
-Assistant that helps users explore trusted medical research more
-efficiently. Instead of manually browsing through multiple documents,
-users can ask questions in natural language and receive clear,
-research-backed answers. By integrating database storage, intelligent
-search, and AI capabilities, you create a secure solution that ensures
-responses are grounded only in verified medical research data.
+In this lab, you act as a data engineer for a medical college library that wants to build a grounded AI research assistant. Instead of manually searching through books and research documents, users can ask questions in natural language and receive answers strictly based on trusted library data. Using Azure SQL Database, Azure AI Search, and Azure OpenAI, you implement a RAG-based solution that ensures responses are secure, citation-backed, and grounded in verified medical research.
 
 **Objectives:**
 
 By completing this lab, you will be able to:
 
-- Create and configure an Azure SQL Database to store medical research
-  data
+- Create and configure an Azure SQL Database to store medical research data
 
 - Import and manage structured research documents
 
@@ -632,3 +625,4 @@ chat to create a complete end-to-end solution. Most importantly, you
 ensured that every response is grounded in verified medical research,
 demonstrating how AI can be used responsibly and effectively in
 real-world healthcare and research environments.
+
