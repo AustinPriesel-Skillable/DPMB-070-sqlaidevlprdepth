@@ -1,4 +1,4 @@
-# Lab 2: Developing a Knowledge-Augmented Medical Library Research Agent with RAG and Azure SQL Database
+# Lab 2: Developing a Knowledge-Augmented Medical Library Research Assistant with RAG and Azure SQL Database
 
 In this lab, you take on the role of building a Medical Research
 Assistant that helps users explore trusted medical research more
@@ -608,4 +608,5 @@ chat to create a complete end-to-end solution. Most importantly, you
 ensured that every response is grounded in verified medical research,
 demonstrating how AI can be used responsibly and effectively in
 real-world healthcare and research environments.
+
 
