@@ -64,7 +64,7 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
 
     - **Size** - **E4ds_v5** 
 	
-		>[!Note] This is one of the minimum recommended VM sizes for SQL Server on Azure VMs. be sure to clean up your resources once you're done with them to prevent any unexpected charges.
+		>[!Note] You might need to search for this. This is one of the minimum recommended VM sizes for SQL Server on Azure VMs. be sure to clean up your resources once you're done with them to prevent any unexpected charges.
 
     - Enter admin details as below:
 
@@ -97,7 +97,7 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image12.png)
 
-7.  Click on **SQL Server management** tab
+7.  Click on **SQL Server Settings** tab
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image13.png)
 
@@ -631,5 +631,6 @@ meaning** to a doctor's query, using vector embeddings.
 ## Conclusion:
 
 This lab demonstrates how SQL Server 2025 evolves beyond a traditional relational database into an AI-powered data platform. By integrating Azure OpenAI embeddings directly within SQL, participants build a semantic case retrieval agent that allows doctors to search patient cases using natural language. Through vector indexing, cosine similarity search, and hybrid filtering, learners gain hands-on experience in implementing real-world AI-driven clinical search solutions inside the database engine.
+
 
 
