@@ -114,9 +114,9 @@ By completing this lab, you will be able to:
 
 3.  Select below values:
 
-    - Name: ContosoMedicalResearch
+    - Name: +++ContosoMedicalResearch+++
 
-    - Server: Select the server created in Exercise 1
+    - Server: **azdbsqlserver@lab.labinstance.id**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image16.png)
 
@@ -156,13 +156,13 @@ By completing this lab, you will be able to:
 
 4.  Enter below details and click **Continue**:
 
-    - Server name: **azdbsqlserver@lab.labinstance.id**
+    - Server name: **The Server name you copied previously**
 
     - Authentication : **SQL Server Authentication**
 
-    - **Username : +++sqladmin+++
+    - Username : +++sqladmin+++
 
-    - **Password : +++Pa55w0rd12345+++
+    - Password : +++Pa55w0rd12345+++
 
     - Select **Trust Server certificate** checkbox
 
@@ -170,61 +170,62 @@ By completing this lab, you will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image27.png)
 
-5.  Sign in to **GitHub Copilot** with your GitHub account.
+5.  Sign in to **GitHub Copilot** with your GitHub account by selecting the account login in the top right corner.
 
     **Note:** Write any prompt and send it, it will ask you to sign infirst.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image28.png)
 
-6.  Prompt Copilot to create a database “ **@workspace, create a SQL Server database named ContosoMedicalResearch with default
-    settings**”. Copilot generates the required query to run.
+6.  Prompt Copilot to create a database:
+
+	+++@workspace, create a SQL Server database names COntosoMedicalResearch with default settings+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image29.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image30.png)
 
-7.  Right-click **DB → Tasks → Import Flat File** as shown in the image
+9.  Right-click **DB → Tasks → Import Flat File** as shown in the image
     below.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image31.png)
 
-8.  Click Next on Import flat file page,
+10.  Click Next on Import flat file page,
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image32.png)
 
-9.  Browse the file library_books.csv form C:\Labfiles folder, enter the
+11.  Browse the file library_books.csv form C:\Labfiles folder, enter the
     table name as **MedicalResearch** and click **Next**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image33.png)
 
-10. Preview the data and click Next.
+11. Preview the data and click Next.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image34.png)
 
-11. Click Next on Modify column.
+12. Click Next on Modify column.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image35.png)
 
-12. On the summary page, click Finish.
+13. On the summary page, click Finish.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image36.png)
 
-13. Once the operation completed, close the window.
+14. Once the operation completed, close the window.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image37.png)
 
-14. Run below queries to verify the data in the table.
+15. Run below queries to verify the data in the table.
 
     ```
-    SELECT COUNT(\*) FROM dbo.MedicalResearch;
-    SELECT TOP 5 Title, Category FROM dbo.MedicalResearch;
+    SELECT COUNT(*) FROM dbo.library_books;
+    SELECT TOP 5 Title, Category FROM dbo.library_books;
     ```
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image38.png)
 
 ## Exercise 4: Create Azure OpenAI service and deploy chat and embedding models
 
-1.  Switch back to Azure and search for **Azure OpenAI** and select it.
+1.  Switch back to Azure and search for +++Azure OpenAI+++ and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image39.png)
 
@@ -240,7 +241,7 @@ By completing this lab, you will be able to:
 
     - Region: **@lab.CloudResourceGroup(ResourceGroup1).Location**
 
-    - Name: +++azsqlaoai@lab.labinstance.id+++
+    - Name: +++azsqlaoai@lab.labinstance.id-lab2+++
 
     - Pricing tier: **Standard S0**
 
@@ -374,7 +375,7 @@ By completing this lab, you will be able to:
 
     - Schema : **dbo**
 
-    - Table name: +++MedicalResearch+++
+    - Table name: +++library_books+++
 
     - SQL server authentication password: +++pa55w0rd12345+++
 
@@ -390,7 +391,7 @@ By completing this lab, you will be able to:
 
     - Subscription: **@lab.CloudSubscription.Name**
 
-    - Azure OpenAI Service: your Azure OpenAI service
+    - Azure OpenAI Service: **azsqlaoai@lab.labinstance.id-lab2
 
     - Model deployment : text-embedding-3-small
 
@@ -449,9 +450,9 @@ By completing this lab, you will be able to:
 
 5.  Enter the details below and click Create.
 
-    - Project Name: +++Foundryproj-@lab.labinstance.id+++
+    - Project Name: +++Foundryproj-@lab.labinstance.id-lab2+++
 
-    - Region: **@lab.CloudResourceGroup(ResourceGroup1).Location**
+    - Region: **East US 2**
 
     - Resource group: Resourcegroup1
 
@@ -462,7 +463,7 @@ By completing this lab, you will be able to:
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image81.png)
 
 7.  Click on **Models** from left navigation menu, search for
-    **gpt-5.2-chat** and select it.
+    +++gpt-5.2-chat+++ and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image82.png)
 
@@ -611,4 +612,5 @@ chat to create a complete end-to-end solution. Most importantly, you
 ensured that every response is grounded in verified medical research,
 demonstrating how AI can be used responsibly and effectively in
 real-world healthcare and research environments.
+
 
