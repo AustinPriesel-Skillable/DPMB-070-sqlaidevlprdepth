@@ -131,9 +131,13 @@ VS Code.
 
 1.  Connect using SSMS:
 
-    - Server: \<VM Public IP\>,1433 (or local instance)
+    - Server: <VM Public IP>,1433 (or local instance)
 
-    - Auth: SQL Authentication
+    - Auth: SQL Server Authentication
+
+		- Username : +++sqlvmuser+++
+	
+		- Password: +++AZvmsql12345+++
 
     - Check “Trust server certificate” (if needed)
 
@@ -143,7 +147,7 @@ VS Code.
 
 ### Exercise 3: Create Azure OpenAI resource and deploy Embedding Model 
 
-1.  Switch back to Azure and search for **Azure OpenAI** and select it.
+1.  Switch back to Azure and search for +++Azure OpenAI+++ and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image21.png)
 
@@ -196,12 +200,12 @@ VS Code.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image30.png)
 
-11. Search for text-embedding , select **text-embedding-3-small** model and
+11. Search for +++text-embedding+++, select **text-embedding-3-small** model and
     click Confirm.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image31.png)
 
-12. Keep the default values and click **Customize**.
+12. Select **Customize**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image32.png)
 
@@ -213,18 +217,18 @@ VS Code.
 
 ### Exercise 4: Create Data base and tables
 
-1.  Switch back to **SSMS**. Right click on server and select New database
+1.  Switch back to **SSMS**. Right click on the **Databases** folder and select New database
     to Get patient case data into SQL Server.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image35.png)
 
 2.  Enter the database name as +++ContosoHospitalDB+++ and click OK.
 
-    +++CREATE DATABASE ContosoHospitalDB;+++
+    	>[!Note] Another way to create the DB is by running the command: +++CREATE DATABASE ContosoHospitalDB;+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image36.png)
 
-3.  Run below query to create a table
+3.  Select File, New, Query with current Connection. Run the below query to create a table
 
     ```
     USE ContosoHospitalDB;
@@ -255,22 +259,22 @@ VS Code.
 
 1 . Run below query to Enable required SQL Server 2025 features
 
-    ```
-    USE ContosoHospitalDB;
-    GO
+```
+USE ContosoHospitalDB;
+GO
 
-    -- 1. Enable external REST endpoint usage
-    EXEC sp_configure 'external rest endpoint enabled', 1;
-    RECONFIGURE WITH OVERRIDE;
-    GO
+-- 1. Enable external REST endpoint usage
+EXEC sp_configure 'external rest endpoint enabled', 1;
+RECONFIGURE WITH OVERRIDE;
+GO
 
-    -- 2. Enable preview features (needed for AI/vector features in many SQL 2025 builds)
-    ALTER DATABASE SCOPED CONFIGURATION
-    SET PREVIEW_FEATURES = ON;
-    GO
-    ```
+-- 2. Enable preview features (needed for AI/vector features in many SQL 2025 builds)
+ALTER DATABASE SCOPED CONFIGURATION
+SET PREVIEW_FEATURES = ON;
+GO
+```
 
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image38.png)
+![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image38.png)
 
 ### Exercise 6: Create external embedding model
 
@@ -631,6 +635,7 @@ meaning** to a doctor's query, using vector embeddings.
 ## Conclusion:
 
 This lab demonstrates how SQL Server 2025 evolves beyond a traditional relational database into an AI-powered data platform. By integrating Azure OpenAI embeddings directly within SQL, participants build a semantic case retrieval agent that allows doctors to search patient cases using natural language. Through vector indexing, cosine similarity search, and hybrid filtering, learners gain hands-on experience in implementing real-world AI-driven clinical search solutions inside the database engine.
+
 
 
 
