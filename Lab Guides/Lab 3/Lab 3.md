@@ -20,7 +20,7 @@ By the end of this lab, participants will be able to:
 
 ## Exercise 1: Provision SQL Server on Azure VM
 
-1.  Open browser enter  Azure SQL hub at +++https://portal.azure.com+++ and sign in with your Azure subscription
+1.  Open browser enter  +++Azure SQL+++ hub at +++https://portal.azure.com+++ and sign in with your Azure subscription
     account. 
 	
 	Username: +++@lab.CloudPortalCredential(User1).Username+++
