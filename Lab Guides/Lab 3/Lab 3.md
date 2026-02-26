@@ -27,7 +27,7 @@ By the end of this lab, participants will be able to:
 	
 	TAP: +++@lab.CloudPortalCredential(User1).AccessToken+++
 	
-1. Enter **Azure SQL** in the search bar and select it.
+1. Enter +++**Azure SQL**+++ in the search bar and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image1.png)
 
@@ -129,7 +129,7 @@ By the end of this lab, participants will be able to:
 
 ## Exercise 2: Create Azure OpenAI resource and deploy embedding models
 
-1.  Switch back to Azure and search for +++*Azure OpenAI+++ and select it.
+1.  Switch back to Azure and search for +++Azure OpenAI+++ and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image19.png)
 
@@ -645,4 +645,5 @@ By the end of this lab, participants will be able to:
 ## Conclusion:
 
 By completing this lab, participants have successfully provisioned infrastructure, enabled SQL Server 2025 AI features, generated vector embeddings using Azure OpenAI, implemented semantic search with DiskANN indexing, and secured sensitive patient data using masking and role-based access control. They also exposed the search functionality as a secure REST API for hospital applications. Overall, learners gained practical experience in building an end-to-end AI-powered, privacy-compliant clinical search system that combines database intelligence, cloud AI services, and secure API development into one integrated solution.
+
 
