@@ -27,7 +27,7 @@ By the end of this lab, participants will be able to:
 	
 	TAP: +++@lab.CloudPortalCredential(User1).AccessToken+++
 	
-1. Enter **Azure SQL** in the search bar and select it.
+1. Enter +++**Azure SQL**+++ in the search bar and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image1.png)
 
