@@ -104,7 +104,7 @@ By completing this lab, you will be able to:
 
 ## Exercise 2: Create an Azure SQL Database
 
-1.  Enter the **Azure SQL** in the search bar and select **Azure SQL database.**
+1.  Enter +++Azure SQL+++ in the search bar and select **Azure SQL database.**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image14.png)
 
@@ -612,6 +612,7 @@ chat to create a complete end-to-end solution. Most importantly, you
 ensured that every response is grounded in verified medical research,
 demonstrating how AI can be used responsibly and effectively in
 real-world healthcare and research environments.
+
 
 
 
