@@ -554,7 +554,7 @@ Goal: Apply role-based access and masking
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%204/media/image55.png)
 
-    +++dab –version+++
+    +++dab –-version+++
 
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%204/media/image56.png)
@@ -711,6 +711,7 @@ end of this exercise, you not only created a functional inventory system
 but also experienced how modern SQL development combines database
 design, AI assistance, governance, and API integration to build
 scalable, secure, and application-ready data solutions.
+
 
 
 
