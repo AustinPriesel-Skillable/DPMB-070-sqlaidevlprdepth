@@ -228,33 +228,6 @@ VS Code.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image36.png)
 
-3.  Select File, New, Query with current Connection. Run the below query to create a table
-
-    ```
-    USE ContosoHospitalDB;
-    GO
-
-    DROP TABLE IF EXISTS dbo.PatientEmbeddings;
-    DROP TABLE IF EXISTS dbo.PatientNotes;
-    GO
-
-    CREATE TABLE dbo.PatientNotes
-    (
-        EncounterID        INT           NOT NULL PRIMARY KEY,
-        AgeGroup           NVARCHAR(50)   NULL,
-        Gender             NVARCHAR(20)   NULL,
-        AdmissionDate      DATE          NULL,
-        Department         NVARCHAR(80)   NULL,
-        ChiefComplaint     NVARCHAR(200) NULL,
-        Summary            NVARCHAR(MAX) NULL,
-        DiagnosisKeywords  NVARCHAR(400) NULL,
-        DischargePlan      NVARCHAR(200) NULL
-    );
-    GO
-    ```
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image37.png)
-
 ### Exercise 5: Import PatientNotes.csv 
 
 1. Run the query to Enable required SQL Server 2025 features
@@ -685,3 +658,4 @@ meaning** to a doctor's query, using vector embeddings.
 ## Conclusion:
 
 This lab demonstrates how SQL Server 2025 evolves beyond a traditional relational database into an AI-powered data platform. By integrating Azure OpenAI embeddings directly within SQL, participants build a semantic case retrieval agent that allows doctors to search patient cases using natural language. Through vector indexing, cosine similarity search, and hybrid filtering, learners gain hands-on experience in implementing real-world AI-driven clinical search solutions inside the database engine.
+
