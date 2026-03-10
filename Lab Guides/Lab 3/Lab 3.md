@@ -20,14 +20,14 @@ By the end of this lab, participants will be able to:
 
 ## Exercise 1: Provision SQL Server on Azure VM
 
-1.  Open browser enter  +++Azure SQL+++ hub at +++https://portal.azure.com+++ and sign in with your Azure subscription
+1.  Open your browser, enter +++https://portal.azure.com+++ and sign in with your Azure subscription
     account. 
 	
 	Username: +++@lab.CloudPortalCredential(User1).Username+++
 	
 	TAP: +++@lab.CloudPortalCredential(User1).AccessToken+++
 	
-1. Enter +++**Azure SQL**+++ in the search bar and select it.
+1. Enter +++Azure SQL+++ in the search bar and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image1.png)
 
@@ -218,7 +218,7 @@ By the end of this lab, participants will be able to:
 
 6. Expand Data storage, and select **Containers**.
 
-7. Select **+ Add Container**.
+7. Select **Create New Container**.
 
 8. In Name enter +++public+++.
 
@@ -261,6 +261,10 @@ By the end of this lab, participants will be able to:
     - Server name: **Azure VM public ip address,1433 (eg :8.234.343.54,1433)**
 
     - Authentication: **SQL Server Authentication**
+   
+    - Username: +++sqlvmuser+++
+   
+    - Password: +++AZvmsql12345+++
 
     - Select **Trust Server certificate** checkbox
 
@@ -637,4 +641,5 @@ By the end of this lab, participants will be able to:
 ## Conclusion:
 
 By completing this lab, participants have successfully provisioned infrastructure, enabled SQL Server 2025 AI features, generated vector embeddings using Azure OpenAI, implemented semantic search with DiskANN indexing, and secured sensitive patient data using masking and role-based access control. They also exposed the search functionality as a secure REST API for hospital applications. Overall, learners gained practical experience in building an end-to-end AI-powered, privacy-compliant clinical search system that combines database intelligence, cloud AI services, and secure API development into one integrated solution.
+
 
