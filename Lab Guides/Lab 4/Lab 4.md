@@ -568,7 +568,7 @@ Goal: Apply role-based access and masking
 12. Open the file and find the **Connection String**. Within the double
     quotes, enter this connection string:
 
-    +++Server=<SQL_SERVER>;Database=SmartInventoryDB;User ID=sqlvmuser;Password=<SQL_PASSWORD>;TrustServerCertificate=True;+++
+    +++Server=<SQL_SERVER>;Database=SmartInventoryDB;User ID=sqlvmuser;Password=AZvmsql12345;TrustServerCertificate=True;+++
 
     ![A screenshot of a computer program Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%204/media/image59.png)
@@ -711,6 +711,7 @@ end of this exercise, you not only created a functional inventory system
 but also experienced how modern SQL development combines database
 design, AI assistance, governance, and API integration to build
 scalable, secure, and application-ready data solutions.
+
 
 
 
