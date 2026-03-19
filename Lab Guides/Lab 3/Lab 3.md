@@ -35,41 +35,40 @@ By the end of this lab, participants will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image1.png)
 
-2.  In the pane for **SQL Server on Azure Virtual Machines**,
-    select **Show options**.
+2.  In the pane for **SQL Server on Azure Virtual Machines**,
+    select **Show options**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image2.png)
 
-3.  In the **Select an image offer** box, choose a SQL Server image
-    (such as **Free SQL Server License: SQL Server 2025 Enterprise
-    Developer on Windows Server 2025**). Select **Create virtual machine**.
+3.  In the **Select an image offer** box, choose a SQL Server image
+    (such as **Free SQL Server License: SQL Server 2025 Enterprise
+    Developer on Windows Server 2025**). Select **Create virtual machine**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image3.png)
 
-4.  On the **Basics** tab, provide the following information and then
+4.  On the **Basics** tab, provide the following information and then
     click **Next: Disk**
 
-    - Subscription :- Select your subscription
+    - Subscription : @lab.CloudSubscription.Name
 
-    - In the **Resource group** - select an existing resource group from the
-    list or choose **Create new** to create a new resource group.
+    - In the **Resource group** - @lab.CloudResourceGroup(ZAVA-Connect-RG).Name
 
-    - Virtual machine name- +++azuresqlvm+++
+    - Virtual machine name- +++azuresqlvm@lab.LabInstance.Id+++
 
-    - **Region** - Central US
+    - **Region** - @lab.CloudResourceGroup(ZAVA-Connect-RG).Location
 
-    - **Availability options** – *Availability zone*.
+    - **Availability options** – *Availability zone*.
 
         1.  **Zone options** – Self-selected zone
 
         2.  **Availability zone** -Zone 1
 
-    - In the **Image** list, select **Free SQL Server License: SQL Server
-    2025 Enterprise Developer on Windows Server 2025** if it's not already
+    - In the **Image** list, select **Free SQL Server License: SQL Server
+    2025 Enterprise Developer on Windows Server 2025** if it's not already
     selected.
 
-    - Select **See all sizes** for the **Size** of the virtual machine and
-    search for the **E4ds_v5** offering. This is one of the minimum
+    - Select **See all sizes** for the **Size** of the virtual machine and
+    search for the **E4ds_v5** offering. This is one of the minimum
     recommended VM sizes for SQL Server on Azure VMs. be sure to clean up
     your resources once you're done with them to prevent any unexpected
     charges.
@@ -79,8 +78,8 @@ By the end of this lab, participants will be able to:
     - Username : +++sqlvmuser+++
     - Password: +++AZvmsql12345+++
 
-    - Under **Inbound port rules**, choose **Allow selected ports**, and
-    then select **RDP (3389)** from the dropdown list.
+    - Under **Inbound port rules**, choose **Allow selected ports**, and
+    then select **RDP (3389)** from the dropdown list.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image4.png)
 
@@ -145,15 +144,15 @@ By the end of this lab, participants will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image20.png)
 
-3.  Etner below values and click **Next**.
+3.  Enter below values and click **Next**.
 
-    Subscription : Select Azure subscription
+    Subscription : **@lab.CloudSubscription.Name**
 
-    Resource Group – **Resourcegroup1**
+    Resource Group – **@lab.CloudResourceGroup(ZAVA-Connect-RG).Name**
 
-    Region – **eastus**
+    Region – **@lab.CloudResourceGroup(ZAVA-Connect-RG).Location**
 
-    Name : +++azsqlaoaiXXXX+++ (replace XXXX with unique number)
+    Name : +++azsqlaoai@lab.LabInstance.Id**
 
     Pricing tier – Select **Standard S0**
 
@@ -190,7 +189,7 @@ By the end of this lab, participants will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image28.png)
 
-11. Search for +++text-embedding+++ , select **text-embedding-3-small**
+11. Search for +++text-embedding+++, select **text-embedding-3-small**
     model and click **Confirm**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image29.png)
@@ -207,18 +206,18 @@ By the end of this lab, participants will be able to:
 
 ## Exercise 3: Create Storage account and Store the file
 
-1.  In the Azure portal, search for and Select Storage Accounts, and
-    create a new **Storage Account** by entering the following:
+1.  In the Azure portal, search for and Select Storage Accounts, and
+    create a new **Storage Account** by entering the following:
 
-    - **Name**: +++sa59936583+++
+    - **Name**: +++sa@lab.LabInstance.Id+++
 
-    - **Subscription:** Depth-lod52257717
+    - **Subscription:** @lab.CloudSubscription.Name
 
-    - **Resource Group**: ZAVA-Connect-RG
+    - **Resource Group**: @lab.CloudResourceGroup(ZAVA-Connect-RG).Name
 
-    - **Region:** EastUS
+    - **Region:** @lab.CloudResourceGroup(ZAVA-Connect-RG).Location
 
-    - **Preferred storage account type**: Azure Blob Storage or Azure Data
+    - **Preferred storage account type**: Azure Blob Storage or Azure Data
     Lake Storage Gen2
 
     ![A screenshot of a computer Description automatically
@@ -229,18 +228,18 @@ By the end of this lab, participants will be able to:
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image34.png)
 
-3.  Wait for the deployment successful and select on **Go to resource**.
+3.  Wait for the deployment successful and select on **Go to resource**.
 
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image35.png)
 
 4.  Expand **Data storage from the left menu** and
-    select **Containers**.
+    select **Containers**.
 
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image36.png)
 
-5.  Select **Add Container**.
+5.  Select **Add Container**.
 
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image37.png)
@@ -261,17 +260,17 @@ By the end of this lab, participants will be able to:
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image40.png)
 
 9.  Browse for files, and navigate to C:\LabFiles folder select
-    the **clinical_reports.csv** file. Click on **Upload**.
+    the **clinical_reports.csv** file. Click on **Upload**.
 
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image41.png)
 
-10. Expand **Settings**, and select **Share acess tokens**.
+10. Expand **Settings**, and select **Share acess tokens**.
 
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image42.png)
 
-11. Select **Generate SAS token and URL**, and copy the **Blob SAS
+11. Select **Generate SAS token and URL**, and copy the **Blob SAS
     token** to a notepad to use later in the lab.
 
     ![A screenshot of a computer Description automatically
@@ -286,6 +285,18 @@ By the end of this lab, participants will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image45.png)
 
+12. Enter below details and click **Continue**.
+
+    - Server name : **Azure VM public ip address that you copied earlier,1433 (eg :8.234.343.54,1433)**
+
+    - Authentication : **SQL Server Authentication**
+
+    - Select **Trust Server certificate** checkbox
+
+    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image50.png)
+
+1.  In the top right, select the **user** icon and select sign in.
+
 2.  Select Work or School account and click Continue.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image46.png)
@@ -297,16 +308,6 @@ By the end of this lab, participants will be able to:
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image48.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image49.png)
-
-12. Enter below details and click **Continue**.
-
-    - Server name : **Azure VM public ip address that you copied earlier,1433 (eg :8.234.343.54,1433)**
-
-    - Authentication : **SQL Server Authentication**
-
-    - Select **Trust Server certificate** checkbox
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image50.png)
 
 ## Exercise 5: Enable SQL Server 2025 AI Capabilities
 
@@ -402,8 +403,8 @@ By the end of this lab, participants will be able to:
 
 7.  Run below query to create External Model.
 
-**Note: Replace Location with text-embedding URL from Microsoft Foundry
-Portal and Credential value with OpenAI Endpoint.**
+    >[!Note] Replace Location with text-embedding URL from Microsoft Foundry
+    Portal and Credential value with OpenAI Endpoint.
 
     ```
     CREATE EXTERNAL MODEL ClinicalEmbeddingModel 
@@ -426,7 +427,7 @@ Portal and Credential value with OpenAI Endpoint.**
 
 8.  Run below query to create Credential for Blob Storage.
 
-**Note: Replace the SECRET value with Storage account SAS token.**
+	>[!Note] Replace the SECRET value with Storage account SAS token.
 
     ```
     -- Create a credential for Blob storage
@@ -441,7 +442,7 @@ Portal and Credential value with OpenAI Endpoint.**
 
 9.  Run below query to create the external data source credential.
 
-**Note: Replace the Location value with your storage account name.**
+	>[!Note] Replace the Location value with your storage account name.
 
     ```
     -- Now create the external data source using that credential
@@ -533,10 +534,10 @@ Portal and Credential value with OpenAI Endpoint.**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image65.png)
 
-**Note:** As the number of rows are too much, session can be interrupted
-sometimes. In this case, you can load the embeddings in two batches.
-First load 100 rows and then again 100 rows with the help of below
-query: (Run the below query twice to load 200 records)
+    >[!Note] As the number of rows are too much, session can be interrupted
+    sometimes. In this case, you can load the embeddings in two batches.
+    First load 100 rows and then again 100 rows with the help of below
+    query: (Run the below query twice to load 200 records)
 
     ```
     INSERT INTO dbo.ReportEmbeddings (ReportID, Embedding)
@@ -546,7 +547,7 @@ query: (Run the below query twice to load 200 records)
     WHERE ReportID NOT IN (SELECT ReportID FROM dbo.ReportEmbeddings);
     ```
 
-You can check how many rows are processed:
+	You can check how many rows are processed:
 
     ```
     SELECT COUNT(*) AS ProcessedReports
@@ -691,8 +692,8 @@ speed up coding.
 
 3.  Ask Copilot:
 
-    - “Generate stored procedure for semantic search on clinical reports
-      using vector embeddings and Azure OpenAI”
+    +++Generate stored procedure for semantic search on clinical reports
+      using vector embeddings and Azure OpenAI+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image73.png)
 
