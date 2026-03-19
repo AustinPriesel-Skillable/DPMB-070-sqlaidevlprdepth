@@ -30,13 +30,13 @@ By the end of this lab, participants will be able to:
 ## Exercise 1: Provision SQL Server on Azure VM
 
 1.  Open browser enter +++https://portal.azure.com+++ and sign in with your
-    Azure subscription account. Enter +++Azure SQL+++ in the search bar
+    Azure subscription account. Enter +++SQL Server on Azure VMs+++ in the search bar
     and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image1.png)
 
 2.  In the pane for **SQL Server on Azure Virtual Machines**,
-    select **Show options**.
+    select **+ Create**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image2.png)
 
