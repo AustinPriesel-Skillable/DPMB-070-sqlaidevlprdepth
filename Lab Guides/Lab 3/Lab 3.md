@@ -152,7 +152,7 @@ By the end of this lab, participants will be able to:
 
     Region – **@lab.CloudResourceGroup(ZAVA-Connect-RG).Location**
 
-    Name : +++azsqlaoai@lab.LabInstance.Id**
+    Name : +++azsqlaoai@lab.LabInstance.Id+++
 
     Pricing tier – Select **Standard S0**
 
@@ -206,7 +206,7 @@ By the end of this lab, participants will be able to:
 
 ## Exercise 3: Create Storage account and Store the file
 
-1.  In the Azure portal, search for and Select Storage Accounts, and
+1.  In the Azure portal, search for and Select +++Storage Accounts+++, and
     create a new **Storage Account** by entering the following:
 
     - **Name**: +++sa@lab.LabInstance.Id+++
@@ -223,7 +223,7 @@ By the end of this lab, participants will be able to:
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image33.png)
 
-2.  Click on **Create**.
+2.  Click on **Review + Create**, then select **create** once more.
 
     ![A screenshot of a computer Description automatically
     generated](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image34.png)
@@ -291,6 +291,10 @@ By the end of this lab, participants will be able to:
 
     - Authentication : **SQL Server Authentication**
 
+	Enter your credentials from the previous task:
+    - Username : +++sqlvmuser+++
+    - Password: +++AZvmsql12345+++
+
     - Select **Trust Server certificate** checkbox
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image50.png)
@@ -310,6 +314,8 @@ By the end of this lab, participants will be able to:
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%203/media/image49.png)
 
 ## Exercise 5: Enable SQL Server 2025 AI Capabilities
+
+>[Note] For each query below, please select **new query** in the tool bar.
 
 1.  In **SSMS → New Query** → run the below query:
 
@@ -387,8 +393,8 @@ By the end of this lab, participants will be able to:
 
 6.  Run below query to create Database Scoped Credential.
 
-    **Note: Replace CREDENTIAL value with OpenAI Endpoint and SECRET value
-    with OpenAI Key in the below query.**
+    >[!Note] Replace CREDENTIAL value with OpenAI Endpoint and SECRET value
+    with OpenAI Key in the below query.
 
     ```
     CREATE DATABASE SCOPED CREDENTIAL [Paste OpenAI Endpoint] 
@@ -449,7 +455,7 @@ By the end of this lab, participants will be able to:
     CREATE EXTERNAL DATA SOURCE ClinicalReportsBlob
     WITH (
         TYPE = BLOB_STORAGE,
-        LOCATION = 'https://<storage account name>.blob.core.windows.net/public',
+        LOCATION = 'https://sa@lab.labInstance.ID.blob.core.windows.net/public',
         CREDENTIAL = ClinicalReportsBlobCred
     );
     GO
