@@ -53,7 +53,7 @@ By the end of this lab, participants will be able to:
 
     - In the **Resource group** - @lab.CloudResourceGroup(ZAVA-Connect-RG).Name
 
-    - Virtual machine name- +++azuresqlvm@lab.LabInstance.Id+++
+    - **Virtual machine Name**- +++azuresqlvm@lab.LabInstance.Id+++
 
     - **Region** - @lab.CloudResourceGroup(ZAVA-Connect-RG).Location
 
@@ -68,10 +68,10 @@ By the end of this lab, participants will be able to:
     selected.
 
     - Select **See all sizes** for the **Size** of the virtual machine and
-    search for the **E4ds_v5** offering. This is one of the minimum
-    recommended VM sizes for SQL Server on Azure VMs. be sure to clean up
-    your resources once you're done with them to prevent any unexpected
-    charges.
+    search for the +++E4ds_v5+++ offering.
+
+	>[!Note] This is one of the minimum recommended VM sizes for SQL Server on Azure VMs. be sure to clean up
+    your resources once you're done with them to prevent any unexpected charges.
 
     Enter admin details as below:
 
