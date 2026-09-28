@@ -70,7 +70,7 @@ By completing this lab, you will be able to:
 
     - Server admin login: +++sqladmin+++
 
-    - Password: +++Pa55w0rd12345+++
+    - Password: +++Pa55w0rd12345!+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image3.png)
 
@@ -174,7 +174,7 @@ By completing this lab, you will be able to:
 
     - Username : +++sqladmin+++
 
-    - Password : +++Pa55w0rd12345+++
+    - Password : +++Pa55w0rd12345!+++
 
     - Select **Trust Server certificate** checkbox
 
@@ -389,7 +389,7 @@ By completing this lab, you will be able to:
 
     - Table name: **MedicalResearch**
 
-    - SQL server authentication password: +++Pa55w0rd12345+++
+    - SQL server authentication password: +++Pa55w0rd12345!+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image67.png)
 
