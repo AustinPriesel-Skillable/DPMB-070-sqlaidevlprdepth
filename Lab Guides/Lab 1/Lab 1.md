@@ -76,7 +76,7 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
 
     - **Image** - **Free SQL Server License: SQL Server 2025 Enterprise Developer on Windows Server 2025**
 
-    - **Size** - Select **all sizes** and search for +++E4ds_v5+++
+    - **Size** - Select **all sizes** and search for +++E4ds_v7+++
 	
 		>[!Note] This is one of the minimum recommended VM sizes for SQL Server on Azure VMs. be sure to clean up your resources once you're done with them to prevent any unexpected charges.
 
@@ -84,7 +84,7 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
 
 	    Username: +++sqlvmuser+++
 
-	    Password: +++AZvmsql12345+++
+	    Password: +++AZvmsql12345!+++
 
     - Under **Inbound port rules**, choose **Allow selected ports**, and
     then select **RDP (3389)** from the dropdown list.
@@ -151,7 +151,7 @@ VS Code.
 
 		- Username : +++sqlvmuser+++
 	
-		- Password: +++AZvmsql12345+++
+		- Password: +++AZvmsql12345!+++
 
     - Check “Trust server certificate” (if needed)
 
