@@ -120,10 +120,16 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
     **SQL connectivity**: Public(internet)
     
     **SQL authentication:** Enable
+        
+	Enter admin details as below:
+
+	Username: +++sqlvmuser+++
+
+	Password: +++AZvmsql12345!+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image14.png)
 
-11.  Once the validation is passed, click on **Create**.
+11. Once the validation is passed, click on **Create**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image15.png)
 
@@ -133,7 +139,11 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image17.png)
 
-12. Make sure you copy the **Public IP Address** to connect from SSMS in
+1. Select **Go to Resource**, under **Networking** on the left panel, select **Network Settings**, **+ Create port rule**, **inbound port rule**.
+
+2. Under **Service**, select **MS SQL**. Ensure priority is **310** and name the rule +++SQL-1433+++. Select **Add**.
+
+12. On the **Overview** page, copy the **Public IP Address** to connect from SSMS in
     next task
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image18.png)
@@ -244,22 +254,22 @@ VS Code.
 
 1. Run the query to Enable required SQL Server 2025 features
 
-```
-USE ContosoHospitalDB;
-GO
+	```
+	USE ContosoHospitalDB;
+	GO
+	
+	-- 1. Enable external REST endpoint usage
+	EXEC sp_configure 'external rest endpoint enabled', 1;
+	RECONFIGURE WITH OVERRIDE;
+	GO
+	
+	-- 2. Enable preview features (needed for AI/vector features in many SQL 2025 builds)
+	ALTER DATABASE SCOPED CONFIGURATION
+	SET PREVIEW_FEATURES = ON;
+	GO
+	```
 
--- 1. Enable external REST endpoint usage
-EXEC sp_configure 'external rest endpoint enabled', 1;
-RECONFIGURE WITH OVERRIDE;
-GO
-
--- 2. Enable preview features (needed for AI/vector features in many SQL 2025 builds)
-ALTER DATABASE SCOPED CONFIGURATION
-SET PREVIEW_FEATURES = ON;
-GO
-```
-
-![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image38.png)
+	![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image38.png)
 
 2.  Right-click Database → Tasks → Import Flat File as shown in the
     image below.
