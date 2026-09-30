@@ -123,7 +123,7 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image14.png)
 
-11.  Once the validation is passed, click on **Create**.
+11. Once the validation is passed, click on **Create**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image15.png)
 
@@ -133,7 +133,11 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image17.png)
 
-12. Make sure you copy the **Public IP Address** to connect from SSMS in
+1. Select **Go to Resource**, under **Networking** on the left panel, select **Network Settings**, **+ Create port rule**, **inbound port rule**.
+
+2. Under **Service**, select **MS SQL**. Ensure priority is **310** and name the rule +++SQL-1433+++. Select **Add**.
+
+12. On the **Overview** page, copy the **Public IP Address** to connect from SSMS in
     next task
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image18.png)
