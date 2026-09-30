@@ -120,6 +120,12 @@ In this lab, participants work with a realistic healthcare scenario at Contoso M
     **SQL connectivity**: Public(internet)
     
     **SQL authentication:** Enable
+        
+	Enter admin details as below:
+
+	Username: +++sqlvmuser+++
+
+	Password: +++AZvmsql12345!+++
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image14.png)
 
