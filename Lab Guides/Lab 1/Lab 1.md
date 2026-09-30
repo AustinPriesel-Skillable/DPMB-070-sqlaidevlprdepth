@@ -248,22 +248,22 @@ VS Code.
 
 1. Run the query to Enable required SQL Server 2025 features
 
-```
-USE ContosoHospitalDB;
-GO
+	```
+	USE ContosoHospitalDB;
+	GO
+	
+	-- 1. Enable external REST endpoint usage
+	EXEC sp_configure 'external rest endpoint enabled', 1;
+	RECONFIGURE WITH OVERRIDE;
+	GO
+	
+	-- 2. Enable preview features (needed for AI/vector features in many SQL 2025 builds)
+	ALTER DATABASE SCOPED CONFIGURATION
+	SET PREVIEW_FEATURES = ON;
+	GO
+	```
 
--- 1. Enable external REST endpoint usage
-EXEC sp_configure 'external rest endpoint enabled', 1;
-RECONFIGURE WITH OVERRIDE;
-GO
-
--- 2. Enable preview features (needed for AI/vector features in many SQL 2025 builds)
-ALTER DATABASE SCOPED CONFIGURATION
-SET PREVIEW_FEATURES = ON;
-GO
-```
-
-![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image38.png)
+	![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image38.png)
 
 2.  Right-click Database → Tasks → Import Flat File as shown in the
     image below.
