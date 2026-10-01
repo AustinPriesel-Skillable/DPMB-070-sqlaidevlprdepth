@@ -338,7 +338,7 @@ VS Code.
 2.  Run below query to Create database scoped credential. The credential
     name must match the URL you reference in the external model and place your **Azure OpenAI Endpoint Key**
 
-    **Note: Replace the OpenAI endpoint and OpenAI Key in lines 3 and 5 of the query.**
+    >[!Note] Replace the OpenAI endpoint and OpenAI Key in lines 3 and 5 of the query.
 
     ```
     USE ContosoHospitalDB;
