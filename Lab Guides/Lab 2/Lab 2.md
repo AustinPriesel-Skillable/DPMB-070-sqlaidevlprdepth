@@ -402,6 +402,8 @@ By completing this lab, you will be able to:
     - Kind: Azure OpenAI
 
     - Subscription: **@lab.CloudSubscription.Name**
+  
+    - Microsoft Foundry Service/project: Select the **User1-** project
 
     - Azure OpenAI Service: **azsqlaoai@lab.labinstance.id-lab2**
 
