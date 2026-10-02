@@ -310,7 +310,7 @@ By completing this lab, you will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image113.png)
 
-15. Search for +++gpt-5.2+++ models and select the **gpt-5.2-chat** model, and
+15. Search for +++gpt-5.2+++ models and select the **gpt-5.2** model, and
     Click Confirm.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image54.png)
@@ -474,11 +474,11 @@ By completing this lab, you will be able to:
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image81.png)
 
 7.  Click on **Models** from left navigation menu, search for
-    +++gpt-5.2-chat+++ and select it.
+    +++gpt-5.2+++ and select it.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image82.png)
 
-8.  Select **Deploy -\> Default settings**.
+8.  Select **Deploy -\> Custom settings**, **Deploy**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image83.png)
 
@@ -507,7 +507,7 @@ By completing this lab, you will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image89.png)
 
-15. Select the gpt-4.1 model as gpt-5.2 is unavailable, and then **Save
+15. Select the gpt-5.2 model, and then **Save
     knowledge base.**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image90.png)
@@ -526,7 +526,7 @@ By completing this lab, you will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image94.png)
 
-19. Enter the unique agent name and click Create.
+19. Enter the agent name +++Lab2-@lab.labinstance.id+++ and click Create.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image95.png)
 
@@ -584,9 +584,9 @@ By completing this lab, you will be able to:
 
     Ask:
 
-    +++What are recent advancements in cancer treatment?+++
+    `What are recent advancements in cancer treatment?`
 
-    +++List books and their authors related to AI in radiology diagnostics+++
+    `List books and their authors related to AI in radiology diagnostics`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image103.png)
 
