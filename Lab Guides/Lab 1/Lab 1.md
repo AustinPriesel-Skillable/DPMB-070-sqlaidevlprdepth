@@ -406,7 +406,6 @@ VS Code.
 	GO
     ```
     
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image42.png)
 
 ### Exercise 7: Generate embeddings and store vectors
 
