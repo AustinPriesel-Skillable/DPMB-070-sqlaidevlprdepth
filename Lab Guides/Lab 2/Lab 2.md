@@ -307,19 +307,9 @@ By completing this lab, you will be able to:
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image113.png)
 
 17. Search for +++gpt-5.2+++ models and select the **gpt-5.2** model, and
-    Click Confirm.
+    select **Deploy**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image54.png)
-
-18. Click on **Customize** to edit deployment details.
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image55.png)
-
-19. **Increase the Token per Minute Rate limit** and then click on Create resource and deploy.
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image56.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image57.png)
 
 ## Exercise 5: Create Azure AI Search Service
 
@@ -584,7 +574,7 @@ By completing this lab, you will be able to:
 
     `List books and their authors related to AI in radiology diagnostics`
 
-    >[!Alert] If there is any issues of with token limitations, please walk through the remaining steps to understand how publishing happens.
+    >[!Alert] If there is any issues of with token limitations, please walk through the remaining steps with out submitting any prompts.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image103.png)
 
