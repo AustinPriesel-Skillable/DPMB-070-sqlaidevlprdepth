@@ -285,41 +285,43 @@ By completing this lab, you will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image47.png)
 
-10. Click on Deployments under Shared resource from the left navigation
+10. Disable the **New Foundry** view by selecting the toggle on the top of the web page.
+   
+12. Click on Deployments under Shared resource from the left navigation
     menu. Select Deploy model-\> Deploy base model.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image48.png)
 
-11. Search for +++text-embedding+++, select **text-embedding-ada-002** model
+13. Search for +++text-embedding+++, select **text-embedding-ada-002** model
     and click Confirm.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image109.png)
 
-12. Keep the default values and click **Customise**.
+14. Keep the default values and click **Customise**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image110.png)
 
-13. Set Tokens per Minute Rate limit to max and click Deploy.
+15. Set Tokens per Minute Rate limit to max and click Deploy.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image111.png)
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image112.png)
 
-14. Click on Deployments from the left navigation menu, select **Deploy
+16. Click on Deployments from the left navigation menu, select **Deploy
     model-\> Deploy base model.**
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image113.png)
 
-15. Search for +++gpt-5.2+++ models and select the **gpt-5.2** model, and
+17. Search for +++gpt-5.2+++ models and select the **gpt-5.2** model, and
     Click Confirm.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image54.png)
 
-16. Click on **Customize** to edit deployment details.
+18. Click on **Customize** to edit deployment details.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image55.png)
 
-17. **Increase the Token per Minute Rate limit** and then click on Create resource and deploy.
+19. **Increase the Token per Minute Rate limit** and then click on Create resource and deploy.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image56.png)
 
