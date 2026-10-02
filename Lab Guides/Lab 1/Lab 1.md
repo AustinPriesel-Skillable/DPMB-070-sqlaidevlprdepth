@@ -358,36 +358,56 @@ VS Code.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image40.png)
 
-4.  Switch back to Foundry portal and copy the model endpoint value:
+1.  Switch back to Foundry portal and copy the model endpoint value:
 
     >[!Note] If you struggle to find the correct endpoint, revert back to the old foundry view, on the left hand panel, select **Models + endpoints** under **My assets**. The Endpoint is under **Target URI**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image41.png)
 
-6.  Update the below query with the Azure OpenAI endpoint and embedding model
-    location (Foundry portal) and run to create an external model. **Note: Copy the target URL of the Azure OpenAI model (text-embedding-ada-002) from the Microsoft Foundry portal.**
+1.  Update the below query with the Azure OpenAI endpoint and embedding model
+    location (Foundry portal) and run to create an external model.
+
+    >[!Note] Copy the target URL of the Azure OpenAI model (text-embedding-ada-002) from the Microsoft Foundry portal. Replace the API-Key from the foundry portal as well. It is easiest to get this information in the old foundry UI and NOT the New UI. 
 
     ```
-    USE ContosoHospitalDB;
-    GO
+	USE ContosoHospitalDB;
+	GO
+	 
+	IF EXISTS (SELECT 1 FROM sys.external_models WHERE name = 'ClinicalEmbeddingModel')
+	    DROP EXTERNAL MODEL ClinicalEmbeddingModel;
+	GO
+	 
+	-- Remove the old credential that points at the wrong resource
+	IF EXISTS (SELECT 1 FROM sys.database_scoped_credentials WHERE name = N'https://azsqlaoai< ID >.openai.azure.com/')
+	    DROP DATABASE SCOPED CREDENTIAL [https://azsqlaoai< ID >.openai.azure.com/];
+	GO
+	 
+	IF EXISTS (SELECT 1 FROM sys.database_scoped_credentials WHERE name = N'https://user1-< ID >-< #### >-resource.cognitiveservices.azure.com/')
+	    DROP DATABASE SCOPED CREDENTIAL [https://user1-< ID >-< #### >-resource.cognitiveservices.azure.com/];
+	GO
+	 
+	CREATE DATABASE SCOPED CREDENTIAL [https://user1-< ID >-< #### >-resource.cognitiveservices.azure.com/]
+	WITH
+	    IDENTITY = 'HTTPEndpointHeaders',
+	    SECRET   = '{"api-key":"<KEY FROM THE FOUNDRY DEPLOYMENT PAGE>"}';
+	GO
+	 
+	CREATE EXTERNAL MODEL ClinicalEmbeddingModel
+	WITH
+	(
+	    LOCATION   = 'https://user1--< ID >-< #### >--resource.cognitiveservices.azure.com/openai/deployments/text-embedding-ada-002/embeddings?api-version=2023-05-15%27,
+	    API_FORMAT = 'Azure OpenAI',
+	    MODEL_TYPE = EMBEDDINGS,
+	    MODEL      = 'text-embedding-ada-002',
+	    CREDENTIAL = [https://user1--< ID >-< #### >--resource.cognitiveservices.azure.com/],
+	    PARAMETERS = '{"sql_rest_options":{"retry_count":10}}'
+	);
 
-    IF EXISTS (SELECT 1 FROM sys.external_models WHERE name = 'ClinicalEmbeddingModel')
-        DROP EXTERNAL MODEL ClinicalEmbeddingModel;
-    GO
-
-    CREATE EXTERNAL MODEL ClinicalEmbeddingModel
-    WITH
-    (
-    LOCATION   = 'https://<resource>.openai.azure.com/openai/deployments/<embedding-deployment>/embeddings?api-version=2024-02-01',
-    API_FORMAT = 'Azure OpenAI',
-    MODEL_TYPE = EMBEDDINGS,
-    MODEL      = 'text-embedding-ada-002',
-    CREDENTIAL = [https://<resource>.openai.azure.com/],
-    PARAMETERS = '{ "sql_rest_options": { "retry_count": 10 } }'
-    );
-    GO
+	-- Smoke test before the bulk insert
+	SELECT AI_GENERATE_EMBEDDINGS(N'test case' USE MODEL ClinicalEmbeddingModel);
+	GO
     ```
-
+    
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image42.png)
 
 ### Exercise 7: Generate embeddings and store vectors
@@ -425,6 +445,18 @@ VS Code.
     WHERE pn.Summary IS NOT NULL;
     GO
     ```
+
+    >[!Alert] If you are receiving a 404 error, use the following query to determine the location for the model and double check correct location is being used in the Ex 6 step 4 query.
+    >
+    ```
+    USE ContosoHospitalDB;
+    GO
+    SELECT name, location, credential_id FROM sys.external_models;
+    SELECT name FROM sys.database_scoped_credentials;
+    GO
+    ```
+    >
+    > If any changes need to take place, return to Ex 6 step 4 with the proper location and re run the query.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image44.png)
 
