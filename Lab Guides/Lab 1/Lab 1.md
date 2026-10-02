@@ -246,7 +246,7 @@ VS Code.
 
 2.  Enter the database name as +++ContosoHospitalDB+++ and click OK.
 
-    >[!Note] Another way to create the DB is by running the command: +++CREATE DATABASE ContosoHospitalDB;+++
+    >[!Note] Another way to create the DB is by running the command: `CREATE DATABASE ContosoHospitalDB;`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image36.png)
 
@@ -430,8 +430,8 @@ VS Code.
 
 3.  Run below query to validate embeddings:
 
-    +++SELECT COUNT(\*) AS TotalEmbeddings FROM dbo.PatientEmbeddings;+++
-	+++SELECT \* FROM dbo.PatientEmbeddings;+++
+    `SELECT COUNT(\*) AS TotalEmbeddings FROM dbo.PatientEmbeddings;`
+    `SELECT \* FROM dbo.PatientEmbeddings;`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image45.png)
 
@@ -630,7 +630,7 @@ meaning** to a doctor's query, using vector embeddings.
 
 2.  Run the query below to test embedding generation:
 
-    +++SELECT AI_GENERATE_EMBEDDINGS(N'test case' USE MODEL ClinicalEmbeddingModel);+++
+    `SELECT AI_GENERATE_EMBEDDINGS(N'test case' USE MODEL ClinicalEmbeddingModel);`
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%201/media/image54.png)
 
