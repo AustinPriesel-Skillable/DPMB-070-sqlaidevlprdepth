@@ -297,15 +297,9 @@ By completing this lab, you will be able to:
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image109.png)
 
-14. Keep the default values and click **Customise**.
+14. Keep the default values and click **Deploy**.
 
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image110.png)
-
-15. Set Tokens per Minute Rate limit to max and click Deploy.
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image111.png)
-
-    ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image112.png)
 
 16. Click on Deployments from the left navigation menu, select **Deploy
     model-\> Deploy base model.**
