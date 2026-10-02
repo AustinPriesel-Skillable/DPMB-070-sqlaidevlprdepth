@@ -588,6 +588,8 @@ By completing this lab, you will be able to:
 
     `List books and their authors related to AI in radiology diagnostics`
 
+    >[!Alert] If there is any issues of with token limitations, please walk through the remaining steps to understand how publishing happens.
+
     ![](https://raw.githubusercontent.com/technofocus-pte/sqlaidevlprdepth/refs/heads/main/Lab%20Guides/Lab%202/media/image103.png)
 
 13. Approve the tool in the chat window.
